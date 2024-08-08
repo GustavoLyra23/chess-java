@@ -10,6 +10,6 @@ public class Rainha extends Peca {
 
     @Override
     public boolean[][] movimentosPossiveis(Peca[][] tabuleiro, int linha, int coluna) {
-        return new boolean[0][];
+        return new boolean[8][8];
     }
 }

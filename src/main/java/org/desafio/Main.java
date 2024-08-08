@@ -14,11 +14,17 @@ public class Main {
         TabuleiroDeXadrez.inicializarTabuleiro();
         int i = 0;
         while (1 < 2) {
-            UI.carregaTabuleiroDeXadrez(TabuleiroDeXadrez.getTabuleiro());
-            var jogadaIncial = UI.perguntarJogadaInicial(sc, i);
-            var jogadaFinal = UI.perguntarJogadaFinal(sc);
-            XadrezService.realizarJogada(jogadaIncial, jogadaFinal, i);
-            i++;
+            try {
+                UI.carregaTabuleiroDeXadrez(TabuleiroDeXadrez.getTabuleiro());
+                var jogadaIncial = UI.perguntarJogadaInicial(sc, i);
+                var jogadaFinal = UI.perguntarJogadaFinal(sc);
+//               XadrezService.verificarXeque();
+                XadrezService.realizarJogada(jogadaIncial, jogadaFinal, i);
+                i++;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+
+            }
         }
     }
 }
