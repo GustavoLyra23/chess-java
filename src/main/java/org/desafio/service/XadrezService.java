@@ -1,7 +1,6 @@
 package org.desafio.service;
 
 import org.desafio.entidades.TabuleiroDeXadrez;
-import org.desafio.enumeradores.CorEnum;
 import org.desafio.util.ConversorDePosicao;
 
 public class XadrezService {
@@ -17,13 +16,13 @@ public class XadrezService {
 
         var peca = tabuleiroDeXadrez[linhaInicial][colunaInicial];
 
-        if (peca == null) {
-            throw new IllegalArgumentException("Nao existe peca nessa posicao");
-            //verifica se nao estou tentando acessar uma peca que nao eh "minha"
-        } else if (peca.getCor() != CorEnum.BRANCO && vezNumero % 2 == 0 || peca.getCor() == CorEnum.BRANCO && vezNumero % 2 == 1) {
-            var corString = (vezNumero % 2 == 0) ? "branco" : "preto";
-            throw new IllegalArgumentException("esta na vez do " + corString);
-        }
+//        if (peca == null) {
+//            throw new IllegalArgumentException("Nao existe peca nessa posicao");
+//            //verifica se nao estou tentando acessar uma peca que nao eh "minha"
+//        } else if (peca.getCor() != CorEnum.BRANCO && vezNumero % 2 == 0 || peca.getCor() == CorEnum.BRANCO && vezNumero % 2 == 1) {
+//            var corString = (vezNumero % 2 == 0) ? "branco" : "preto";
+//            throw new IllegalArgumentException("esta na vez do " + corString);
+//        }
 
 
         var jogadas = peca.movimentosPossiveis(tabuleiroDeXadrez, linhaInicial, colunaInicial);
