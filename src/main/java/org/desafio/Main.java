@@ -13,12 +13,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         TabuleiroDeXadrez.inicializarTabuleiro();
         int i = 0;
+
         while (1 < 2) {
             try {
                 UI.carregaTabuleiroDeXadrez(TabuleiroDeXadrez.getTabuleiro());
                 var jogadaIncial = UI.perguntarJogadaInicial(sc, i);
                 var jogadaFinal = UI.perguntarJogadaFinal(sc);
-//               XadrezService.verificarXeque();
                 XadrezService.realizarJogada(jogadaIncial, jogadaFinal, i);
                 i++;
             } catch (IllegalArgumentException e) {
