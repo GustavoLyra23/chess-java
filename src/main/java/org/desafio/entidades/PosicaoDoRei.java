@@ -1,15 +1,18 @@
 package org.desafio.entidades;
 
-public class Posicao {
+import org.desafio.entidades.pecas.Rei;
+
+public class PosicaoDoRei {
 
     private Integer linha;
     private Integer coluna;
+    private Rei rei;
 
-    public Posicao() {
+    public PosicaoDoRei() {
     }
 
 
-    public Posicao(Integer linha, Integer coluna) {
+    public PosicaoDoRei(Integer linha, Integer coluna) {
         this.linha = linha;
         this.coluna = coluna;
     }
@@ -28,5 +31,13 @@ public class Posicao {
 
     public void setColuna(Integer coluna) {
         this.coluna = coluna;
+    }
+
+    public Rei getRei() {
+        return rei;
+    }
+
+    public void setRei(Rei rei) {
+        this.rei = rei;
     }
 }
