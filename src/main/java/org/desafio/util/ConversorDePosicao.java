@@ -12,7 +12,7 @@ public class ConversorDePosicao {
             case "f" -> 5;
             case "g" -> 6;
             case "h" -> 7;
-            default -> throw new IllegalArgumentException("PosicaoDoRei Invalida!");
+            default -> throw new IllegalArgumentException("Posicao Invalida!");
         };
     }
 
@@ -26,7 +26,7 @@ public class ConversorDePosicao {
             case "3" -> 5;
             case "2" -> 6;
             case "1" -> 7;
-            default -> throw new IllegalArgumentException("PosicaoDoRei Invalida!");
+            default -> throw new IllegalArgumentException("Posicao Invalida!");
         };
     }
 
@@ -40,7 +40,7 @@ public class ConversorDePosicao {
             case 5 -> "f";
             case 6 -> "g";
             case 7 -> "h";
-            default -> throw new IllegalArgumentException("PosicaoDoRei Invalida!");
+            default -> throw new IllegalArgumentException("Posicao Invalida!");
         };
     }
 
@@ -54,7 +54,7 @@ public class ConversorDePosicao {
             case 5 -> "3";
             case 6 -> "2";
             case 7 -> "1";
-            default -> throw new IllegalArgumentException("PosicaoDoRei Invalida!");
+            default -> throw new IllegalArgumentException("Posicao Invalida!");
         };
 
     }

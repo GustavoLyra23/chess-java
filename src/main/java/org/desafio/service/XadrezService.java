@@ -25,11 +25,7 @@ public class XadrezService {
         var colunaFinal = ConversorDePosicao.converterColunaDeXadrezParaMatriz(String.valueOf(posicaoFinal.charAt(0)));
         var peca = tabuleiroDeXadrez[linhaInicial][colunaInicial];
 
-        var xeque  = verificarXeque(vezNumero, tabuleiroDeXadrez);
-        if(xeque){
-           System.out.println("Xeque!");
-        }
-
+      
          var xequeMate = verificarXequeMate(vezNumero, tabuleiroDeXadrez);
         if (xequeMate) {
             throw new XequeMateException("Xeque-mate");
@@ -61,7 +57,7 @@ public class XadrezService {
         if(verificarXeque(vezNumero, tabuleiroDeXadrez)){
             tabuleiroDeXadrez[linhaFinal][colunaFinal] = null;
             tabuleiroDeXadrez[linhaInicial][colunaInicial] = peca;
-            throw new IllegalArgumentException("Xeque ainda existe");                          
+            throw new IllegalArgumentException("Xeque existe");                          
          }     
 
         System.out.println("Movimento realizado de " + posicaoInicial + " para " + posicaoFinal);
